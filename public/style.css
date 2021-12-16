@@ -149,6 +149,7 @@ p {
   height: 500px;
   background-image: linear-gradient(blue, green);
   border-radius: 50px;
+  font-size: 30px;
 }
 .redDerp
 {
