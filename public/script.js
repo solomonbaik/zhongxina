@@ -90,6 +90,10 @@ function adjustArray1 ()
       if (gameCounter == userCounter && arrayMatch() == false)
       {
         alive = false;
+        if (scoreCounter > window.localStorage.myHighScore)
+        {
+          window.localStorage.myHighScore = scoreCounter;
+        }
         audio.play();
         reset();
       }
@@ -109,6 +113,10 @@ function adjustArray2 ()
       if (gameCounter == userCounter && arrayMatch() == false)
       {
         alive = false;
+        if (scoreCounter > window.localStorage.myHighScore)
+        {
+          window.localStorage.myHighScore = scoreCounter;
+        }
         audio.play();
         reset();
       }
@@ -129,6 +137,10 @@ function adjustArray3 ()
       if (gameCounter == userCounter && arrayMatch() == false)
       {
         alive = false;
+        if (scoreCounter > window.localStorage.myHighScore)
+        {
+          window.localStorage.myHighScore = scoreCounter;
+        }
         audio.play();
         reset();
       }
@@ -150,6 +162,10 @@ function adjustArray4 ()
       if (gameCounter == userCounter && arrayMatch() == false)
       {
         alive = false;
+        if (scoreCounter > window.localStorage.myHighScore)
+        {
+          window.localStorage.myHighScore = scoreCounter;
+        }
         audio.play();
         reset();
       }
@@ -208,82 +224,14 @@ function reset()
   userArray = empty;
   userCounter = 0;
   gameCounter = 0;
+  scoreCounter = 0;
   alive = false;
   localColor = 0;
 }
 
 function showScore  ()
 {
-  var solver
-  if (scoreCounter == 1)
-  {
-    solver = 1;
-  }
-  if (scoreCounter == 3)
-  {
-    solver = 2;
-  }
-  if (scoreCounter == 6)
-  {
-    solver = 3;
-  }
-  if (scoreCounter == 10)
-  {
-    solver = 4;
-  }
-  if (scoreCounter == 15)
-  {
-    solver = 5;
-  }
-  if (scoreCounter == 21)
-  {
-    solver = 6;
-  }
-  if (scoreCounter == 28)
-  {
-    solver = 7;
-  }
-  if (scoreCounter == 36)
-  {
-    solver = 8;
-  }
-  if (scoreCounter == 45)
-  {
-    solver = 9;
-  }
-  if (scoreCounter == 55)
-  {
-    solver = 10;
-  }
-  if (scoreCounter == 66)
-  {
-    solver = 11;
-  }
-  if (scoreCounter == 78)
-  {
-    solver = 12;
-  }
-  if (scoreCounter == 91)
-  {
-    solver = 13;
-  }
-  if (scoreCounter == 105)
-  {
-    solver = 14;
-  }
-  if (scoreCounter == 136)
-  {
-    solver = 15;
-  }
-  if (scoreCounter == 153)
-  {
-    solver = 16;
-  }
-  else
-  {
-    solver = 69;
-  }
-  alert(solver);
+  alert(window.localStorage.myHighScore);
 }
 
 document.getElementById("starter").addEventListener("click", startGame);
