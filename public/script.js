@@ -13,6 +13,7 @@ var userArray = new Array (100);
 let answers = new Array(100);
 var localColor = 0;
 
+
 function test ()
 {
     element1.classList.remove('redDerp');
