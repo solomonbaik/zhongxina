@@ -19,6 +19,10 @@ function drawArt(ctx) {
   ctx.lineTo(-190, 120);
   ctx.stroke();
 
+  //slide the triangle left and right
+  ctx.translate(100*Math.sin(time2.getSeconds() + time2.getMilliseconds() / 1000), 0);
+//translate (sin of time)
+
   // ctx.beginPath();
   // ctx.moveTo(-190, -120);
   // ctx.stroke();
